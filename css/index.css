@@ -1,0 +1,515 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    /* outline: 2px red ridge; */
+
+}
+
+*::before , *::after {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+svg {
+    display: block;
+}
+
+body {
+    background: url("https://stockholm50.qodeinteractive.com/wp-content/uploads/2020/06/h1-rev-02.png") top center no-repeat;
+    font-family: 'Krona One', sans-serif;
+}
+
+.wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+.Header {
+    width: 100%;
+    padding: 1.875rem 0rem;
+    animation: fadeDown 2s ease 1 both;
+}
+
+.Header-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-hamburguesa {
+    width: 1.875rem;
+    display: none;
+}
+
+.Header-izquierda {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+.Header-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+.Header-logo {
+    width: 7.5rem;
+}
+
+.mobile {
+    height: 0px;
+    transition: all 0.7s ease;
+    overflow: hidden;
+}
+
+@media (max-width: 1030px) {
+    .Header-hamburguesa {
+        display: block;
+    }
+    .Header-logo {
+        margin: auto;
+    }
+    .pc {
+        display: none;
+    }
+    .mobile.isActive {
+        height: 50vh;
+    }
+    .Header-ul {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 3.125rem;
+        margin: 2.5rem 3.4375rem 2.5rem;
+    }
+    .Header-li {
+        width: 100%;
+        padding-bottom: .9375rem;
+        border-bottom: .0625rem solid rgb(196, 193, 193);
+    }
+}
+
+@media (max-width: 770px) {
+    .Header-izquierda {
+        margin-right: 30%;
+    }
+    .Header-boton {
+        display: none;
+    }
+}
+
+.Header-a {
+    position: relative;
+}
+
+.Header-a::after {
+    content: "";
+    width: 100%;
+    height: .125rem;
+    background-color: black;
+    transform: scaleX(0);
+    transition: all 0.4s ease;
+    transform-origin: left;
+    position: absolute;
+}
+
+.Header-a:hover::after {
+    transform: scaleX(1);
+}
+
+.Header-boton {
+    padding: 1rem 2rem;
+    border: .125rem solid black;
+}
+
+.Main-wrapper {
+    position: relative;
+    padding-bottom: 9.25rem;
+    overflow: hidden;
+}
+
+.Digital {
+    text-transform: lowercase;
+    font-size: 13vw;
+    margin-top: 1.25rem;
+    animation: fadeLeft 2s ease 1 both;
+}
+
+.Date1 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    animation: fadeRight 2s ease 1 both;
+}
+
+.Date2 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    animation: fadeRight 2s ease 1 both;
+}
+
+.Date2::before {
+    content: "";
+    width: 1.5rem;
+    height: .2rem;
+    background-color: black;
+    margin: 0 .625rem 0 0;
+}
+
+@media (max-width: 620px) {
+    .Date1, .Date2 {
+        font-size: .9375rem;
+    }
+    .Date2::before {
+        width: 1.25rem;
+        height: .1875rem;
+    }
+}
+
+.Highlights {
+    font-size: 2.5rem;
+    border-bottom: .125rem solid black;
+    padding-bottom: .9375rem;
+}
+
+.Secciones {
+    margin-top: 3.75rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.875rem;
+}
+
+@media (max-width: 900px) {
+    .Secciones {
+        flex-direction: column;
+        gap: initial;
+    }
+}
+
+.Secciones-section {
+    flex-basis: calc(100% / 3);
+    margin-bottom: 7.5rem;
+}
+
+.Secciones-img {
+    width: 100%;
+}
+
+.Secciones-h4 {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+
+.Secciones-enlace {
+    display: inline;
+    position: relative;
+}
+
+.Secciones-enlace::after {
+    content: "";
+    width: 100%;
+    height: .125rem;
+    background-color: black;
+    transform: scaleX(0);
+    transition: all 0.4s ease;
+    transform-origin: left;
+    position: absolute;
+}
+
+.Secciones-enlace:hover::after {
+    transform: scaleX(1);
+}
+
+.Main-artists {
+    width: 100%;
+    background-color: #fefcde;
+}
+
+.Main-wrapper-artistas {
+    padding: 5rem 0;
+}
+
+.Artistas {
+    margin: auto;
+    max-width: 87.5rem;
+    font-size: 3.125rem;
+    line-height: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Artistas-li {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Artistas-li:hover {
+    color: transparent;
+    -webkit-text-stroke: .125rem black;
+}
+
+.Artistas-li::after {
+    content: "";
+    width: 3rem;
+    height: .3rem;
+    background-color: black;
+    margin: 0 .9375rem 0 .9375rem;
+}
+
+@media (max-width: 807px) {
+    .Artistas-li::after {
+        display: none;
+    }
+    .Artistas {
+        max-width: 18.75rem;
+        font-size: 1.875rem;
+    }
+}
+
+.Programs {
+    background-image: url("https://stockholm50.qodeinteractive.com/wp-content/uploads/2020/07/h1-bcgr-img-3-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2.5rem;
+    border-bottom: .125rem solid black;
+    padding-top: 9.25rem;
+    padding-bottom: .9375rem;
+}
+
+.Programas {
+    margin-top: 3.75rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Programas-fecha {
+    width: 20%;
+    font-size: 1.25rem;
+    line-height: 1.8125rem;
+}
+
+.Programas-descripcion {
+    font-size: 1.6875rem;
+    line-height: 2.25rem;
+    
+}
+
+.Programas-boton {
+    padding: 1rem 2rem;
+    border: .125rem solid black;
+}
+
+@media (max-width: 1015px) {
+    .Programas {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3.125rem;
+        padding-bottom: 5rem;
+    }
+    .Programas-fecha {
+        width: 100%;
+        margin-bottom: 1.25rem;
+    }
+    .Programas-descripcion {
+        margin-bottom: 1.5625rem;
+    }
+}
+
+.Main-wrapper-mapas {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+@media (max-width: 950px) {
+    .Main-wrapper-mapas {
+        flex-direction: column;
+        gap: initial;
+    }
+}
+
+.Mapas {
+    flex-basis: calc(100% / 2);
+    margin-top: 9.375rem;
+    padding-bottom: 2.5rem;
+}
+
+.Mapas-titulo {
+    font-size: 2.5rem;
+}
+
+.Mapas-fecha {
+    font-size: 1rem;
+    line-height: 1.8125rem;
+    margin-top: .8rem;
+    border-bottom: .125rem solid black;
+}
+
+.Mapas-imagen {
+    padding-top: 1.875rem;
+    width: 100%;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    margin-top: 6.25rem;
+}
+
+.Footer-wrapper {
+    padding: 8.125rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Copyright-span {
+    font-size: 2.1875rem;
+}
+
+.Copyright-div {
+    margin-top: .75rem;
+}
+
+.Enlaces {
+    font-size: 1.25rem;
+}
+
+.Enlaces-li {
+    margin-bottom: 1.125rem;
+}
+
+.Enlaces2 {
+    font-size: 1.25rem;
+}
+
+.Enlaces2-li {
+    margin-bottom: 1.125rem;
+}
+
+.Newsletter-span {
+    font-size: 1.25rem;
+}
+
+.Newsletter-input {
+    display: block;
+    font-size: .625rem;
+    margin-top: 1.125rem;
+    margin-bottom: 1.125rem;
+    padding-bottom: .375rem;
+    border-bottom: .125rem solid white;
+}
+
+.Newsletter-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Newsletter-icono {
+    width: 2em;
+    padding: .3em;
+    color: black;
+    margin-right: .625rem;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.Header-boton:hover, .Programas-boton:hover {
+    color: white;
+    background-color: black;
+}
+
+@media (max-width: 962px) {
+    .Footer-wrapper {
+        flex-flow: wrap;
+        align-items: flex-start;
+    }
+    .Copyright, .Enlaces, .Enlaces2, .Newsletter {
+        width: calc(100% / 2);
+        margin-bottom: 3.125rem;
+    }
+}
+
+@media (max-width: 585px) {
+    .Footer-wrapper {
+        flex-flow: wrap;
+    }
+    .Copyright, .Enlaces, .Enlaces2 {
+        width: 100%;
+        margin-bottom: 3.125rem;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
