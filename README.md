@@ -2,7 +2,7 @@
 Copycat de la web demo Stockholm 50.<br>
 
 <h2>Interesting Links:</h2>
-<a href="https://alejandroochandodev.github.io/pixar/">Live Site</a><br>
+<a href="https://alejandroochandodev.github.io/stockholm-demo-50/">Live Site</a><br>
 <a href="https://stockholm50.qodeinteractive.com/">Original Site<a><br>
 
 <h2>Preview:</h2>
